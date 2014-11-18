@@ -1,0 +1,11 @@
+Install anything with MacPorts software manager!
+1. Download Xcode
+2. Download Xcode Command Line Tools
+(Terminal)
+$xcode-select —install
+(click Install to install Command Line Tools, if message says can’t install that means you already have latest version)
+3. Download MacPorts
+4. Install a program (e.g. PIP module manager + Python34)
+(Terminal)
+$port search (name of program you want to install, e.g. pip)
+$sudo port install (name of program, e.g. py34-pip)
