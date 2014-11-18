@@ -22,3 +22,9 @@ $pip3.4 install ipython[all]
 Run IPython Notebook:
 (Terminal)
 $ipython notebook
+Exit IPython Notebook:
+(close browser)
+(Terminal)
+CTRL-C
+exit? y [Enter]
+
