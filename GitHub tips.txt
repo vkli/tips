@@ -1,0 +1,9 @@
+1. Create repository using GitHub Desktop
+2. Add/Edit file in GitHub folder > repository
+3. Commit and Sync changes in GitHub Desktop
+
+OR
+
+1. Clone repository from GitHub to Desktop
+2. Add/Edit file
+3. Commit and Sync
