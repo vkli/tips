@@ -7,3 +7,6 @@ OR
 1. Clone repository from GitHub to Desktop
 2. Add/Edit file
 3. Commit and Sync
+
+CAN RENAME/DELETE FILES, NOT FOLDERS:
+GitHub Website > file > (pencil icon or trash icon)
