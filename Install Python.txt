@@ -1,0 +1,44 @@
+#is comment
+$is command line (i.e. from terminal, terminal > python, etc.)
+
+
+Install Python from python.org/downloads
+
+Run Python:
+(Terminal)
+$python3.5
+$exit()
+
+Check if pip installed:
+(Terminal)
+pip3
+
+If not installed, install pip (Python module manager):
+Copy/paste get-pip.py from http://pip.readthedocs.org/en/latest/installing.html into get-pip.py text file in Downloads folder
+(Terminal)
+$ cd ~/Downloads #navigate to Downloads folder
+$python3.5 get-pip.py
+
+Use pip to install/update IPython (also called Jupyter) + Notebook + Dependencies:
+(Terminal)
+$pip3 install ipython[all]
+
+Run IPython Notebook:
+(Terminal)
+$ipython notebook
+or
+$jupyter notebook
+Exit IPython Notebook:
+(close browser)
+(Terminal)
+CTRL-C
+exit? y [Enter]
+
+Install modules:
+(Terminal)
+(anything you install in python will be usable in python notebook)
+(if already installed, will say so)
+$pip3 install numpy scipy matplotlib
+$pip3 install statsmodels 
+(dependencies will be automatically installed: $pip3 install pandas patsy cython)
+

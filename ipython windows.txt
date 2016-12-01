@@ -1,0 +1,38 @@
+# = comment
+
+ACTUALLY, just install enthought canopy
+https://store.enthought.com/#canopy-academic > request academic license (sign up first)
+
+Editor > File > New > Jupyter Notebook
+open notebooks by double clicking on file
+
+install statsmodels:
+Tools > Package Manager > Available Packages > (search statsmodels) > install statsmodels 0.6.1-14
+
+No undo, instead:
+CTRL-S (Creates Checkpoint)
+Revert to Checkpoint
+
+#but can only have 1 checkpoint at a time :(
+Instead, File > Make a copy
+
+
+
+Evaluate cell:
+
+[Shift-Enter] 
+
+#only outputs last output, for rest use print(“text”,calculations)
+
+#Heading cells must also be evaluated
+
+#to edit Heading cells, double-click
+
+
+
+[*] means busy
+must close plots in order for program to continue
+
+To abort:
+
+Kernel>Interrupt
