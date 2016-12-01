@@ -1,3 +1,24 @@
+GitHub is basically the Wikipedia of code.
+
+CONTRIBUTING: 
+
+Anyone can upload code: 
+see REPOSITORIES
+
+Anyone can edit code, and the original coder can choose to incorporate edits:
+1. Go to the repository where the code is located
+2. Click Fork
+3. Go to the file you want to edit
+4. Click the Edit symbol (the pencil symbol on the top right)
+5. Make your edits
+6. Send Pull Request, so the original coder can review and incorporate your edits
+
+You can view the forking/editing history of any code:
+1. Go to the code repository
+2. Next to Fork is a number, which is the number of forks it has. Click that number.
+
+REPOSITORIES:
+
 1. Create repository using GitHub Desktop
 2. Add/Edit file in GitHub folder > repository
 3. Commit and Sync changes in GitHub Desktop
