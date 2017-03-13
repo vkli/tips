@@ -6,7 +6,7 @@ Install Python from python.org/downloads
 
 Run Python:
 (Terminal)
-$python3.5
+$python3
 $exit()
 
 Check if pip installed:
@@ -17,7 +17,7 @@ If not installed, install pip (Python module manager):
 Copy/paste get-pip.py from http://pip.readthedocs.org/en/latest/installing.html into get-pip.py text file in Downloads folder
 (Terminal)
 $ cd ~/Downloads #navigate to Downloads folder
-$python3.5 get-pip.py
+$python3 get-pip.py
 
 Use pip to install/update IPython (also called Jupyter) + Notebook + Dependencies:
 (Terminal)
