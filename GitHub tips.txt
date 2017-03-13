@@ -29,5 +29,15 @@ OR
 2. Add/Edit file
 3. Commit and Sync
 
-CAN RENAME/DELETE FILES, NOT FOLDERS:
+4. Check/review/incorporate pull requests at GitHub Website > repository > pull requests (among other things, all as tabs on the top bar)
+
+EDIT/DELETE FILES:
 GitHub Website > file > (pencil icon or trash icon)
+Commit to master if it's your own file.
+Commit to new branch/request pull (so they can review your edits) if it's someone else's file.
+
+EDIT REPOSITORIES:
+GitHub Website > repository > (pencil icon)
+
+DELETE REPOSITORIES:
+GitHub Website > repository > settings > delete this repository
