@@ -1,5 +1,5 @@
 #is comment
-$is command line (i.e. from terminal, terminal > python, etc.)
+$is command line (i.e. from terminal, python, python shell, etc.)
 
 
 Install Python from python.org/downloads
@@ -42,3 +42,14 @@ $pip3 install numpy scipy matplotlib
 $pip3 install statsmodels 
 (dependencies will be automatically installed: $pip3 install pandas patsy cython)
 
+Install PyQt using MacPorts:
+(Terminal)
+$port search pyqt4
+$sudo port install py27-pyqt4 #installs PyQt4 on Python2.7 IN APPLICATIONS/MACPORTS
+$sudo port install py27-tkinter #installs required libraries to run IDLE
+
+Run PyQt:
+Open Applications/MacPorts/Python2.7/IDLE
+(Python Shell = IDLE)
+$import PyQt4 #must type this exactly, if no error then you successfully installed PyQt
+$exit()
