@@ -31,12 +31,12 @@ OR
 
 4. Check/review/incorporate pull requests at GitHub Website > repository > pull requests (among other things, all as tabs on the top bar)
 
-EDIT/DELETE FILES:
+EDIT/RENAME/DELETE FILES:
 GitHub Website > file > (pencil icon or trash icon)
 Commit to master if it's your own file.
 Commit to new branch/request pull (so they can review your edits) if it's someone else's file.
 
-EDIT REPOSITORIES:
+EDIT/RENAME REPOSITORIES:
 GitHub Website > repository > (pencil icon)
 
 DELETE REPOSITORIES:
