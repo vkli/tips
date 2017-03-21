@@ -36,8 +36,11 @@ GitHub Website > file > (pencil icon or trash icon)
 Commit to master if it's your own file.
 Commit to new branch/request pull (so they can review your edits) if it's someone else's file.
 
-EDIT/RENAME REPOSITORIES:
+EDIT REPOSITORIES:
 GitHub Website > repository > (pencil icon)
+
+RENAME REPOSITORIES:
+GitHub Website > repository > settings > rename
 
 DELETE REPOSITORIES:
 GitHub Website > repository > settings > delete this repository
