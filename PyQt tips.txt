@@ -1,0 +1,20 @@
+# is comment
+
+excellent tutorial: http://zetcode.com/gui/pyqt4/
+
+open file:
+(from Python Shell)
+File>Open>PyQt4tutorial.pyw
+
+or
+
+Right-click PyQt4tutorial.pyw>Open With>IDLE
+# .py by default opens with Xcode, .pyw by default opens with IDLE
+
+run file:
+(from file window)
+Run>Run Module
+
+abort run:
+(from Python Shell = IDLE)
+Shell>Interrupt Execution

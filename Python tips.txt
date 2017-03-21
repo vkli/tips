@@ -1,0 +1,25 @@
+# is comment
+
+Note Python and iPython Notebook are the same except:
+1. Python commands/output are entered/displayed in command terminal. iPython commands/output are entered/displayed in web browser GUI.
+2. Python modules/scripts are written as .py text files and imported and run in the command terminal or Python Shell. iPython modules/scripts are written as iPython notebooks and opened and run in the web browser GUI.
+
+https://docs.python.org/3/tutorial/modules.html#executing-modules-as-scripts
+
+Run scripts fib, fib2 from module fibo.py in terminal:
+(Terminal)
+(Navigate to directory containing fibo.py)
+$ python3
+$ import fibo
+$ fibo.fib(1000)
+$ fibo.fib2(100)
+$ exit()
+
+Note if you add the following to the end of fibo.py:
+if __name__ == "__main__":
+    import sys
+    fib(int(sys.argv[1]))
+Then you can run module fibo.py as a script in terminal:
+(Terminal)
+(Navigate to directory containing fibo.py)
+$ python3 fibo.py 1000
