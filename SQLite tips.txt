@@ -1,0 +1,187 @@
+$ = from terminal
+# = comment
+
+
+Download SQLite:
+SQLite3 is pre-installed on Mac in /usr/bin
+or
+www.sqlite.org > Download > sqlite-amalgamation-3170000.zip
+follow instructions on http://sqlite.org/howtocompile.html
+
+
+Using sqlite3:
+(Navigate to directory you wish to work in)
+
+# open command-line shell/create database file called test:
+$ sqlite3 test.db
+
+# lists and describes all .commands:
+$ .help
+# .commands do not need ; at end
+# commands need ; at end
+
+# view content:
+$ .tables #tables
+$ .schema #code that created tables
+$ .databases #current databases open in terminal
+
+# create table called t1:
+$ create table t1(
+   ...> f1 varchar(30),
+   ...> f2 text,
+   ...> f3 real
+   ...> ); #semicolon ends the command
+$ insert into t1 values('hello','goodbye',10);
+# use “” for blank entry
+$ insert into t1(f1,f2,f3) values(‘h’,’i’,””);
+# set output mode by .mode or .explain (optimal):
+$ .explain
+# note .mode ascii ruins the discernment of rows
+# include column labels in output:
+$ .header on
+
+# export:
+$ .output test.txt #from here on, any outputs of commands go to file called test.txt
+$ select * from t1; #print table t1
+$ .output #resume outputting to terminal
+
+# display table/data:
+$ select * from t1;
+# the result is:
+f1    f2             f3  
+----  -------------  ----
+hello  goodbye        10.0
+hallo  world          20.0
+
+# load extension (e.g. nextchar):
+(go to https://www.sqlite.org/src/doc/trunk/README.md)
+# compile:
+(go to files>ext>misc>nextchar.c)
+(save as nextchar.c in directory you wish to work in)
+(in new terminal window, navigate to directory containing nextchar.c)
+$ gcc -g -fPIC -dynamiclib nextchar.c -o nextchar.dylib
+# now nextchar.c has been converted to DLL (on Mac, extension .dylib)
+# can delete nextchar.dylib.DSYM
+# load:
+(in directory containing nextchar.dylib, open sqlite3 command-line shell)
+$ .load nextchar.dylib
+$ create table dictionary(word text unique);
+$ insert into dictionary values('char');
+$ select next_char('cha','dictionary','word');
+# result is:
+r
+# extension unloads upon exit, next time you open sqlite3 it won’t be loaded
+
+# use file i/o extension (already built into command-line shell):
+# readfile(x) converts object x to blob that can be loaded into table
+$ create table images(name text, type text, img blob);
+$ insert into images(name,type,img)
+   ...> values('icon','jpeg',readfile('icon.jpg'));
+$ .headers on
+$ .explain
+$ select * from images;
+# result is:
+name  type           img 
+----  -------------  ----
+icon  jpeg           ????
+# writefile(x,y) writes blob y into file x and returns the number of bytes written
+$ select writefile('icon.jpg',img) from images where name='icon';
+# result is:
+writ
+----
+22210
+
+#view content continued:
+$ .schema t1 #schema for table t1
+$ .schema %t% #schema for tables containing t
+# result is:
+CREATE TABLE t1(
+f1 varchar(30),
+f2 text,
+f3 real
+);
+CREATE TABLE dictionary(word text unique);
+$ .tables t1
+$ .tables %t%
+
+# export table into .csv:
+$ .mode csv
+$ .headers on #export header as first row of .csv
+$ .output t1.csv
+$ select * from t1; #export table t1 as .csv
+$ .output
+
+# double click file:
+$ .system open t1.csv 
+$ .system open "SQLite tips.txt"
+
+# import .csv into table:
+(in current directory, save test.csv as csv NOT csv utf)
+$ .mode csv
+# doesn’t matter if headers on or off
+# if new table, first row of .csv becomes header:
+$ .import test.csv test #new table name is test
+$ .headers on
+$ .explain
+$ select * from test;
+# result is:
+name  id           
+----  -------------
+flipper  dolphin      
+victoria  human  
+# if existing table, all rows of .csv get appended to it:
+$ create table t2(one text, two text);
+$ insert into t2 values(‘hi’,’bi’);
+$ .import test.csv t2
+$ .headers on
+$ .explain
+$ select * from t2;
+# result is:
+one   two          
+----  -------------
+hi    bi           
+name  id           
+flipper  dolphin      
+victoria  human
+
+# Backup database:
+
+(from Terminal)
+# convert database to ASCII text file of SQLite commands:
+(.dump converts test.db to test.dump, gzip compresses test.dump to test.dump.gz)
+$ sqlite3 test.db ‘.dump’ > test.dump
+or (also compresses)
+$ sqlite3 test.db ‘.dump’ | gzip -c > test.dump.gz
+# reconvert SQLite commands to database:
+(gunzip decompresses test.dump.gz to test.dump, < converts test.dump to test2.db)
+$ sqlite3 test2.db < test.dump
+or (also decompresses)
+$ gunzip -c test.dump.gz | sqlite3 test2.db
+
+or
+
+(from sqlite3 command-line shell)
+# convert to ASCII text file:
+$ .output test.dump
+$ .dump
+$ .output
+# reconvert to database:
+$ .exit
+$ sqlite3 test2.db<test.dump
+
+# Result of Backup:
+
+$ sqlite3 test2.db
+$ .tables
+dictionary  images      t1          t2          test
+$ select * from test;
+flipper|dolphin
+victoria|human
+
+# save and exit:
+$ .save test0.db #must use new filename, otherwise will say filename locked
+$ .exit
+
+
+Excellent tutorial:
+http://www.sqlitetutorial.net/
