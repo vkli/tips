@@ -38,7 +38,7 @@ $ insert into t1(f1,f2,f3) values(‘h’,’i’,””);
 $ .explain
 # note .mode ascii ruins the discernment of rows
 # include column labels in output:
-$ .header on
+$ .headers on
 
 # export:
 $ .output test.txt #from here on, any outputs of commands go to file called test.txt
@@ -51,7 +51,7 @@ $ select * from t1;
 f1    f2             f3  
 ----  -------------  ----
 hello  goodbye        10.0
-hallo  world          20.0
+h     i  
 
 # load extension (e.g. nextchar):
 (go to https://www.sqlite.org/src/doc/trunk/README.md)
@@ -103,6 +103,8 @@ f3 real
 CREATE TABLE dictionary(word text unique);
 $ .tables t1
 $ .tables %t%
+# result is:
+dictionary  t1
 
 # export table into .csv:
 $ .mode csv
