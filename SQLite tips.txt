@@ -32,8 +32,8 @@ $ create table t1(
    ...> f3 real
    ...> ); #semicolon ends the command
 $ insert into t1 values('hello','goodbye',10);
-# use “” for blank entry
-$ insert into t1(f1,f2,f3) values(‘h’,’i’,””);
+# use “” or NULL for blank entry
+$ insert into t1(f1,f2,f3) values(‘h’,’i’,“”);
 # set output mode by .mode or .explain (optimal):
 $ .explain
 # note .mode ascii ruins the discernment of rows
