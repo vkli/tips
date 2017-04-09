@@ -1,5 +1,6 @@
 $ = from terminal
 # = comment
+CTRL C or CTRL D = abort
 
 
 Download SQLite:
