@@ -170,7 +170,8 @@ $ .dump
 $ .output
 # reconvert to database:
 $ .exit
-$ sqlite3 test2.db<test.dump
+$ sqlite3 test2.db
+$ .read test.dump
 
 # Result of Backup:
 
