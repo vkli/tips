@@ -1,0 +1,28 @@
+*if editing in multiple terminals causes problems opening file: 1. recover file 2. rm .file.swp
+
+$ vim
+:help
+(move by arrows, not pad)
+
+scroll:
+Fn up/down (page up/down)
+100 CTRL E/Y (vim up/down 100 lines)
+G (bottom)
+gg (top
+$ (end of line)
+0 (beginning of line)
+
+$vimtutor or (open TUTORCOPY2) or :help tutor (tutorial)
+
+$vim file_name.ext (open file_name in vim)
+$vi file_name.ext (open file_name in vi)
+zr (show full)
+
+: (command mode)
+i (insert mode)
+<esc> (exit mode)
+
+:%s/word1/word2/gc *find word1, replace w/ word2, gc = ask for confirmation
+
+:wq (w-save, q-quit)
+:qa! (q-quit, a-all, !-don't save)
