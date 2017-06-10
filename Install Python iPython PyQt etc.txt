@@ -3,25 +3,26 @@ $is command line (i.e. from terminal, python, python shell, etc.)
 
 
 Install Python from python.org/downloads
+Accepting defaults installs it to ~/../../Library/Frameworks/Python.framework/Versions/3.6 (for version 3.6)
 
 Run Python:
 (Terminal)
-$python3
+$python3.6
 $exit()
 
 Check if pip installed:
 (Terminal)
-pip3
+$pip3.6
 
-If not installed, install pip (Python module manager):
+If not installed, install pip (Python package manager):
 Copy/paste get-pip.py from http://pip.readthedocs.org/en/latest/installing.html into get-pip.py text file in Downloads folder
 (Terminal)
 $ cd ~/Downloads #navigate to Downloads folder
-$python3 get-pip.py
+$python3.6 get-pip.py
 
 Use pip to install/update IPython (also called Jupyter) + Notebook + Dependencies:
 (Terminal)
-$pip3 install ipython[all]
+$pip3.6 install ipython[all]
 
 Run IPython Notebook:
 (Terminal)
@@ -38,8 +39,8 @@ Install modules:
 (Terminal)
 (anything you install in python will be usable in python notebook)
 (if already installed, will say so)
-$pip3 install numpy scipy matplotlib
-$pip3 install statsmodels 
+$pip3.6 install numpy scipy matplotlib
+$pip3.6 install statsmodels 
 (dependencies will be automatically installed: $pip3 install pandas patsy cython)
 
 Install PyQt using MacPorts:
@@ -50,6 +51,17 @@ $sudo port install py27-tkinter #installs required libraries to run IDLE
 
 Run PyQt:
 Open Applications/MacPorts/Python2.7/IDLE
-(Python Shell = IDLE)
+(IDLE = Python Shell)
 $import PyQt4 #must type this exactly, if no error then you successfully installed PyQt
 $exit()
+
+Check TkInter is installed:
+(Terminal)
+$python3.6
+$import tkinter
+$tkinter._test()
+$exit()
+
+Update Python: 
+install new version by repeating above steps
+uninstall old version if you wish
