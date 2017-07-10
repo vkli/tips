@@ -1,0 +1,32 @@
+# is comment
+
+Note Python and Jupyter Notebook (previously called iPython Notebook) are the same except:
+1. Python commands/output are entered/displayed in command terminal. Jupyter Notebook commands/output are entered/displayed in web browser notebook.
+2. Python modules/scripts are written as .py text files and imported and run in the command terminal or Python Shell. Jupyter Notebook modules/scripts are written and run as notebooks in the web browser.
+
+AWESOME STARTING REFERENCE by Pybonacci: http://youtu.be/H6dLGQw9yFQ
+
+Run Jupyter Notebook (automatically runs latest version installed):
+(Terminal)
+$jupyter notebook
+Exit Jupyter Notebook:
+(Close browser or Logout)
+(Terminal)
+[CTRL-C]
+exit? y [Enter]
+
+No undo, instead:
+Save and Checkpoint
+Revert to Checkpoint
+#but can only have 1 checkpoint at a time :(
+
+No CTRL-C, instead:
+Kernel>Interrupt
+
+Evaluate cell:
+[Shift-Enter] 
+#only outputs last output, for rest use print(“…”,…)
+#even Heading cells must be evaluated
+#to edit Heading cells, de-evaluate by double-clicking
+
+[*] means busy
