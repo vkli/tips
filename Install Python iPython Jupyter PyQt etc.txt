@@ -1,0 +1,93 @@
+#is comment
+$is command line (i.e. from terminal, python, python shell, etc.)
+
+
+Install Python from python.org/downloads
+Accepting defaults installs it to ~/../../Library/Frameworks/Python.framework/Versions/3.6 (for version 3.6)
+
+Run Python:
+(Terminal)
+$python3.6
+$exit()
+
+Check if pip (Python package manager) installed:
+(Terminal)
+$pip3.6
+
+If not installed, install pip (for version 3.5):
+Copy/paste get-pip.py from http://pip.readthedocs.org/en/latest/installing.html into get-pip.py text file in Downloads folder
+(Terminal)
+$ cd ~/Downloads #navigate to Downloads folder
+$python3.5 get-pip.py
+
+Use pip to install/update Jupyter (previously called Ipython) + Notebook + Dependencies:
+(Terminal)
+(if anything is already installed, will tell you)
+$pip3.5 install ipython[all]
+$pip3.6 install jupyter[all]
+
+Run Jupyter Notebook (automatically runs latest version installed):
+(Terminal)
+$jupyter notebook
+or
+$ipython notebook
+(if you get error message:
+execution error: "http://localhost:8888/tree…” doesn’t understand the “open location” message
+then copy/paste http://localhost:8888/tree… into browser)
+
+Check Jupyter Notebook/Python version:
+(Browser)
+New > Notebook: Python3 > Help > About
+or
+(Terminal)
+$jupyter --version
+$jupyter notebook --version
+
+Exit Jupyter Notebook:
+(Close browser or Logout)
+(Terminal)
+[CTRL-C]
+exit? y [Enter]
+
+( Can uninstall a version of Jupyter Notebook:
+(Terminal)
+(uninstalls jupyter/notebook from python3.6, keeps jupyter/notebook from python3.5)
+$pip3.6 uninstall jupyter notebook
+Uninstalling jupyter…Proceed? y
+Uninstalling notebook…Proceed? y )
+
+Install modules:
+(Terminal)
+(anything you install in python will be usable in python notebook)
+(if already installed, will tell you)
+$pip3.6 install numpy scipy matplotlib
+$pip3.6 install statsmodels 
+(dependencies will be automatically installed: $pip3.6 install pandas patsy cython)
+
+List pip-installed modules:
+$pip3.6 list
+
+Check TkInter is installed:
+(Terminal)
+$python3.6
+$import tkinter
+$tkinter._test()
+$exit()
+
+Install PyQt on Python2.7 using MacPorts:
+(Terminal)
+$port search pyqt4
+$sudo port install py27-pyqt4 #installs PyQt4 on Python2.7 in Applications/Macports
+
+( Can install TkInter on Python2.7 using MacPorts:
+$sudo port install py27-tkinter )
+
+Run PyQt:
+Open Applications/MacPorts/Python2.7/IDLE
+(IDLE = Python Shell)
+$import PyQt4 #must type this exactly, if no error then you successfully installed PyQt
+$exit()
+
+Update Python: 
+install new version by repeating above steps
+uninstall old version if you wish
