@@ -22,7 +22,7 @@ Evaluate cell:
 
 [Shift-Enter] 
 
-#only outputs last output, for rest use print(ìtextî,calculations)
+#only outputs last output, for rest use print(‚Äútext‚Äù,calculations)
 
 #Heading cells must also be evaluated
 
