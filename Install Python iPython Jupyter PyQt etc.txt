@@ -60,9 +60,8 @@ Install modules:
 (Terminal)
 (anything you install in python will be usable in python notebook)
 (if already installed, will tell you)
-$pip3.6 install numpy scipy matplotlib
-$pip3.6 install statsmodels 
-(dependencies will be automatically installed: $pip3.6 install pandas patsy cython)
+$pip3.6 install numpy scipy matplotlib openpyxl
+$pip3.6 install statsmodels (dependencies will be automatically installed: $pip3.6 install pandas patsy cython)
 
 List pip-installed modules:
 $pip3.6 list
