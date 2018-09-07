@@ -1,0 +1,57 @@
+install solidity (instructions at https://solidity.readthedocs.io/en/latest/installing-solidity.html):
+
+download solidity_0.4.24.tar.gz from https://github.com/ethereum/solidity/releases/tag/v0.4.24
+unzip to solidity_0.4.24
+install xcode
+install homebrew (see https://brew.sh/) by $/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+(Terminal)
+$ cd solidity_0.4.24
+$ ./scripts/install_deps.sh
+$ mkdir build
+$ cd build
+$ cmake .. && make
+
+check works
+$/Users/lickivy/Desktop/DISC/solidity_0.4.24/build/solc/solc
+Or
+$add path
+$export PATH=$PATH:/Users/lickivy/Desktop/DISC/solidity_0.4.24/build/solc
+$solc
+
+tutorial at https://ethereumbuilders.gitbooks.io/guide/content/en/solidity_tutorials.html
+make source.sol in current directory of your choice
+$ solc source.sol
+
+tutorial at http://www.ethdocs.org/en/latest/contracts-and-transactions/contracts.html
+make helloworld.sol in current directory of your choice
+$ solc helloworld.sol
+
+install geth (instructions at https://ethereum.github.io/go-ethereum/install/#install-on-macos-via-homebrew
+and
+https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Mac):
+
+(Terminal)
+(go to directory you want to install it in)
+$ git clone https://github.com/ethereum/go-ethereum.git
+
+install go (SUPER user-friendly alternative to c++):
+$brew install go
+add path
+$export PATH=$PATH:/usr/local/opt/go/libexec/bin
+check works
+$go
+
+$ cd go-ethereum
+$ make geth
+
+check works
+$/Users/lickivy/go-ethereum/build/bin/geth version
+Or
+add path
+$export PATH=$PATH:/Users/lickivy/go-ethereum/build/bin
+$geth --help
+
+uninstall geth, go:
+remove geth, go files from above PATHs
+$ brew uninstall go
