@@ -44,3 +44,9 @@ GitHub Website > repository > settings > rename
 
 DELETE REPOSITORIES:
 GitHub Website > repository > settings > delete this repository
+
+DOWNLOAD/CLONE REPOSITORIES:
+(Terminal)
+(go to directory you want to install it in)
+$ git clone https://github.com/vkli/predicting-off-target-effects-of-CRISPR-Cas9 
+(or whatever repository you want to download)
