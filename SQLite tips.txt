@@ -2,13 +2,14 @@ $ = from terminal
 # = comment
 CTRL C or CTRL D = abort
 
-
 Download SQLite:
 SQLite3 is pre-installed on Mac in /usr/bin
 or
 www.sqlite.org > Download > sqlite-amalgamation-3170000.zip
 follow instructions on http://sqlite.org/howtocompile.html
 
+Excellent tutorial:
+http://www.sqlitetutorial.net/
 
 Using sqlite3:
 (Navigate to directory you wish to work in)
@@ -185,7 +186,3 @@ victoria|human
 # save and exit:
 $ .save test0.db #must use new filename, otherwise will say filename locked
 $ .exit
-
-
-Excellent tutorial:
-http://www.sqlitetutorial.net/
