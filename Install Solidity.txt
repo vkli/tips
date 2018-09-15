@@ -3,7 +3,6 @@ install solidity (instructions at https://solidity.readthedocs.io/en/latest/inst
 download solidity_0.4.24.tar.gz from https://github.com/ethereum/solidity/releases/tag/v0.4.24
 unzip to solidity_0.4.24
 install xcode
-install homebrew (see https://brew.sh/) by $/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 (Terminal)
 $ cd solidity_0.4.24
@@ -26,6 +25,11 @@ $ solc source.sol
 tutorial at http://www.ethdocs.org/en/latest/contracts-and-transactions/contracts.html
 make helloworld.sol in current directory of your choice
 $ solc helloworld.sol
+
+
+IGNORE:
+
+install homebrew (see https://brew.sh/) by $/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 install geth (instructions at https://ethereum.github.io/go-ethereum/install/#install-on-macos-via-homebrew
 and
