@@ -1,0 +1,52 @@
+$git --version
+$which git
+get latest developer version:
+install homebrew (see https://brew.sh/) by $/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$brew install git
+==> Summary
+🍺  /usr/local/Cellar/git/2.19.0_1: 1,512 files, 318.2MB
+==> Caveats
+==> gettext
+gettext is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides the BSD gettext library & some software gets confused if both are in the library path.
+If you need to have gettext first in your PATH run:
+  echo 'export PATH="/usr/local/opt/gettext/bin:$PATH"' >> ~/.bash_profile
+For compilers to find gettext you may need to set:
+  export LDFLAGS="-L/usr/local/opt/gettext/lib"
+  export CPPFLAGS="-I/usr/local/opt/gettext/include"
+==> git
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+zsh completions and functions have been installed to:
+  /usr/local/share/zsh/site-functions
+Emacs Lisp files have been installed to:
+  /usr/local/share/emacs/site-lisp/git
+$git --version
+$which git
+git documentation: https://git-scm.com/book/en/v2
+
+
+https://metamask.io/ > get firefox add-on
+
+https://nodejs.org/en/ > get LTS version
+This package has installed:
+	•	Node.js v8.12.0 to /usr/local/bin/node
+	•	npm v6.4.1 to /usr/local/bin/npm
+Make sure that /usr/local/bin is in your $PATH.
+$echo $PATH
+
+install solidity0.4.25
+$export PATH=$PATH:/Users/lickivy/Desktop/DISC/solidity_0.4.25/build/solc
+$solc
+
+$sudo npm install -g truffle
+check works:
+$mkdir truffle
+$cd truffle
+$truffle init
+ctrl-d
+
+Ethereum Whitepaper - https://github.com/ethereum/wiki/wiki/White-Paper
+Bitcoin Whitepaper - https://bitcoin.org/bitcoin.pdf
+A very thorough resource list (Skim through it to get a feel for what you'll be learning)
+https://medium.com/blockchannel/the-ethereum-developer-essential-reading-list-4fe5d788b294
