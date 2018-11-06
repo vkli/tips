@@ -10,15 +10,22 @@ Run Python:
 $python3.6
 $exit()
 
-Check if pip (Python package manager) installed:
+Pip (Python package manager) help/Check if pip installed (automatically installed with Python3.4+):
 (Terminal)
 $pip3.6
 
-If not installed, install pip (for version 3.5):
+If not installed, install pip (for version, say, 3.5):
 Copy/paste get-pip.py from http://pip.readthedocs.org/en/latest/installing.html into get-pip.py text file in Downloads folder
 (Terminal)
 $ cd ~/Downloads #navigate to Downloads folder
 $python3.5 get-pip.py
+
+Uninstall pip (for, say, pip3.6):
+$ pip3.6 uninstall pip
+$ pip3.6
+
+Reinstall pip (for, say, pip3.6):
+$ python3.6 -m ensurepip --default-pip
 
 Use pip to install/update Jupyter (previously called Ipython) + Notebook + Dependencies:
 (Terminal)
@@ -34,14 +41,6 @@ $ipython notebook
 (if you get error message:
 execution error: "http://localhost:8888/tree…” doesn’t understand the “open location” message
 then copy/paste http://localhost:8888/tree… into browser)
-
-Check Jupyter Notebook/Python version:
-(Browser)
-New > Notebook: Python3 > Help > About
-or
-(Terminal)
-$jupyter --version
-$jupyter notebook --version
 
 Exit Jupyter Notebook:
 (Close browser or Logout)
@@ -62,9 +61,6 @@ Install modules:
 (if already installed, will tell you)
 $pip3.6 install numpy scipy matplotlib openpyxl
 $pip3.6 install statsmodels (dependencies will be automatically installed: $pip3.6 install pandas patsy cython)
-
-List pip-installed modules:
-$pip3.6 list
 
 Check TkInter is installed:
 (Terminal)
@@ -87,6 +83,20 @@ Open Applications/MacPorts/Python2.7/IDLE
 $import PyQt4 #must type this exactly, if no error then you successfully installed PyQt
 $exit()
 
-Update Python: 
-install new version by repeating above steps
-uninstall old version if you wish
+Check versions:
+$jupyter notebook
+(Browser)
+New > Notebook: Python3 > Help > About
+or
+$jupyter --version
+$jupyter notebook --version
+$pip3.6 --version
+$pip3.6 list
+(includes pip version)
+
+Update versions: 
+install new python version by repeating above steps
+uninstall old python version if you wish
+$pip3.6 install -U pip
+$pip3.6 install -U notebook
+$pip3.6 install -U scikit-learn
