@@ -61,6 +61,7 @@ Install modules:
 (if already installed, will tell you)
 $pip3.6 install numpy scipy matplotlib openpyxl
 $pip3.6 install statsmodels (dependencies will be automatically installed: $pip3.6 install pandas patsy cython)
+$pip3.6 install scikit-learn
 
 Check TkInter is installed:
 (Terminal)
@@ -99,4 +100,6 @@ install new python version by repeating above steps
 uninstall old python version if you wish
 $pip3.6 install -U pip
 $pip3.6 install -U notebook
-$pip3.6 install -U scikit-learn
+$pip3.6 install pipdate
+$pipdate3
+(updates all modules)
