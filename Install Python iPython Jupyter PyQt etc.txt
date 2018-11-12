@@ -33,11 +33,12 @@ Use pip to install/update Jupyter (previously called Ipython) + Notebook + Depen
 $pip3.5 install ipython[all]
 $pip3.6 install jupyter[all]
 
-Run Jupyter Notebook (automatically runs latest version installed):
+Run Jupyter Notebook (runs in browser, even with no internet connection!):
 (Terminal)
 $jupyter notebook
 or
 $ipython notebook
+(automatically runs latest version installed)
 (if you get error message:
 execution error: "http://localhost:8888/tree…” doesn’t understand the “open location” message
 then copy/paste http://localhost:8888/tree… into browser)
