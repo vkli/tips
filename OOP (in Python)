@@ -1,0 +1,27 @@
+>>> means command, followed by output
+# means comment
+
+#Basically, an object x of class Name has attributes x.attribute and methods x.method. These attributes can be changed independently of each other. The changes apply to x independently of other objects.
+
+#example code
+#replace value with a number such as 1
+#replace f(input, attribute) with a function such as input+self.attribute
+#replace f(input2, attribute) with a function such as input2+self.attribute
+class Name(object):
+	attribute=value
+	def __init__(self, input):
+		self.attribute2=f(input, self.attribute)
+	def method(self, input2):
+		self.attribute2=f(input2, self.attribute)
+
+#example result
+#replace input with a number such as 1
+#replace input2 with a number such as 2
+>>> x=Name(input)
+>>>x.attribute
+value
+>>> x.attribute2
+f(input, value)
+>>> x.method(input2)
+>>>x.attribute2
+f(input2,value)
