@@ -6,9 +6,9 @@ Note Python and Jupyter Notebook (previously called iPython Notebook) are the sa
 
 AWESOME STARTING REFERENCE by Pybonacci: http://youtu.be/H6dLGQw9yFQ
 
-Run Jupyter Notebook (automatically runs latest version installed):
+Run Jupyter Notebook:
 (Terminal)
-$jupyter notebook
+$/Library/Frameworks/Python.framework/Versions/3.6/bin/jupyter notebook
 Exit Jupyter Notebook:
 (Close browser or Logout)
 (Terminal)
