@@ -14,7 +14,7 @@ $ cmake .. && make
 check works
 $/Users/lickivy/Desktop/DISC/solidity_0.4.24/build/solc/solc
 Or
-$add path
+add path
 $export PATH=$PATH:/Users/lickivy/Desktop/DISC/solidity_0.4.24/build/solc
 $solc
 
