@@ -33,6 +33,9 @@ Use pip to install/update Jupyter (previously called Ipython) + Notebook + Depen
 $pip3.5 install ipython[all]
 $pip3.6 install jupyter[all]
 
+Find Jupyter Notebook path:
+$pip3.6 show jupyter
+
 Run Jupyter Notebook (runs in browser, even with no internet connection!):
 (Terminal)
 $/Library/Frameworks/Python.framework/Versions/3.6/bin/jupyter notebook
