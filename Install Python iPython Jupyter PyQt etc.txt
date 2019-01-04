@@ -35,10 +35,7 @@ $pip3.6 install jupyter[all]
 
 Run Jupyter Notebook (runs in browser, even with no internet connection!):
 (Terminal)
-$jupyter notebook
-or
-$ipython notebook
-(automatically runs latest version installed)
+$/Library/Frameworks/Python.framework/Versions/3.6/bin/jupyter notebook
 (if you get error message:
 execution error: "http://localhost:8888/tree…” doesn’t understand the “open location” message
 then copy/paste http://localhost:8888/tree… into browser)
