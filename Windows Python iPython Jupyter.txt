@@ -37,7 +37,14 @@ iPython/Jupyter Notebook
 Use pip to install/update Jupyter (previously called Ipython) + Notebook + Dependencies:
 (Commandline)
 (if anything is already installed, will tell you)
+(installs to Python3.7 using pip3.7)
 $pip3.7 install jupyter[all]
+
+Uninstall Jupyter from Python3.7:
+$pip3.7 uninstall jupyter[all]
+
+Install Jupytor on Python3.6:
+$pip3.6 install jupyter[all]
 
 Run Jupyter Notebook:
 $jupyter notebook
@@ -52,7 +59,7 @@ If error:
 Connecting to Kernel
 A connection to the notebook server could not be established. The notebook will continue trying to reconnect, but until it does, you will NOT be able to run code. Check your network connection or notebook server configuration
 Then:
-$pip3.7 install tornado==4.5.3
+$pip3.6 install tornado==4.5.3
 
 Exit Jupyter Notebook:
 CTRL-C
