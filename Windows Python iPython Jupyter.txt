@@ -7,48 +7,50 @@ Check whether your OS is 64-bit or 32-bit:
 Start>Control Panel>System
 check whether System Type says 64-bit or 32-bit
 
-Install python3.6.5 64-bit (pip automatically comes with 3.4+) using:
-https://www.python.org/downloads/release/python-365/ (x86-64 executable installer)
+Install python3.7 64-bit (pip automatically comes with 3.4+) using:
+https://www.python.org/downloads/release (x86-64 executable installer)
 
 or
 
-Install python3.6.5 32-bit on windows by going to https://www.python.org/downloads/, it will display "Download the latest version for Windows," then just click "Download Python 3.6.5."
+Install python3.7 32-bit on windows by going to https://www.python.org/downloads/, it will display "Download the latest version for Windows," then just click "Download Python 3.7."
 
 Open python:
 (applications>IDLE)
-prints Python 3.6.5 (default, May 02 2018, 12:00:00) [MSC v.1500 64 bit (AMD64)] on win64
+prints Python 3.7 (default, May 02 2018, 12:00:00) [MSC v.1500 64 bit (AMD64)] on win64
 >>> 1+1
 prints 2
 
 Close python:
 >>>exit()
 
-Open python3.6 from commandline (cmd in Windows):
+Open python3.7 from commandline (cmd in Windows):
 Check path:
 (System Properties > Environment Variables > System Variables>Path)
-(copy C:...\Python36)
+(copy C:...\Python37)
 (from commandline)
-$cd (paste C:...\Python36)
+$cd (paste C:...\Python37)
 $dir
-find the name of the python.exe file: (in this case: python)
+find the name of the python3.7.exe file: (in this case: python3.7)
 Open python:
-(type name of the python.exe file)
-$python 
+(type name of the python3.7.exe file)
+$python3.7 
 Close python:
 >>>exit()
 
-Check pip3.6 works:
+Check pip3.7 works:
 (from commandline)
-(type name of the python.exe file, -m, pip)
-$ python -m pip
+(type name of the python3.7.exe file, -m, pip)
+$ python3.7 -m pip
 or
-$ python -m ensurepip --default-pip
+$pip3.7
+or
+$ python3.7 -m ensurepip --default-pip
 
-Upgrade pip3.6:
-$python -m pip install --upgrade pip
+Upgrade pip3.7:
+$pip3.7 install --upgrade pip
 
-Install module using pip3.6:
-$ python -m pip install numpy
+Install module using pip3.7:
+$ pip3.7 install numpy
 
 Check module works:
 (from IDLE)
@@ -57,19 +59,7 @@ Check module works:
 (should print an array: array([1,2,3]))
 
 View installed modules:
-$python -m pip list
-
-Unfortunately they're in the wrong place.
-
-View actual installed modules (right place):
-$cd (paste C:...\Python36)
-$cd lib
-$dir
-(shows all the modules as .py files)
-
-To actually install module:
-get the .py file and put in C:...\Python36\lib
-
+$pip3.7 list
 
 --------------------------------------------------
 
@@ -81,13 +71,24 @@ Use pip to install/update Jupyter (previously called Ipython) + Notebook + Depen
 (installs to Python3.7 using pip3.7)
 $pip3.7 install jupyter[all]
 
+Unfortunately it's in the wrong place.
+
+View actual installed modules (right place):
+$cd (paste C:...\Python37)
+$cd lib
+$dir
+(shows all the modules as .py files)
+
+To actually install modules in future:
+get the .py file and put in C:...\Python37\lib
+
 Uninstall Jupyter from Python3.7:
 $pip3.7 uninstall jupyter[all]
 
 Install Jupyter on Python3.6:
 $python -m pip install jupyter[all]
 
-Run Jupyter Notebook:
+Run Jupyter Notebook (right place) on Python3.7:
 $jupyter notebook
 (Choose location for notebook)
 (Click New>Jupyter 3 Notebook)
