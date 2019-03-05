@@ -44,6 +44,9 @@ $ python -m pip
 or
 $ python -m ensurepip --default-pip
 
+Upgrade pip3.6:
+$python -m pip install --upgrade pip
+
 Install module using pip3.6:
 $ python -m pip install numpy
 
