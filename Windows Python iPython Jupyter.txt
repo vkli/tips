@@ -14,20 +14,44 @@ or
 
 Install python3.6.5 32-bit on windows by going to https://www.python.org/downloads/, it will display "Download the latest version for Windows," then just click "Download Python 3.6.5."
 
-Test python/pip using:
-https://stackoverflow.com/questions/43304612/how-to-install-pip-o
-(open IDLE)
+Open python:
+(applications>IDLE)
 returns Python 3.6.5 (default, May 02 2018, 12:00:00) [MSC v.1500 64 bit (AMD64)] on win64
->> 1+1
+>>> 1+1
 returns 2
 
-(open Commandline: cmd on windows)
-$ pip3.6 install numpy
+Close python:
+>>>exit()
+
+Open python3.6 from commandline (cmd in Windows):
+Check path:
+(System Properties > Environment Variables > System Variables>Path)
+(copy C:...\Python36)
+(from commandline)
+$cd (paste C:...\Python36)
+$dir
+find the name of the python.exe file: (in this case: python)
+Open python:
+(type name of the python.exe file)
+$python 
+Close python:
+>>>exit()
+
+Check pip3.6 works:
+(from commandline)
+(type name of the python.exe file, -m, pip)
+$ python -m pip
 or
 $ python -m ensurepip --default-pip
 
+Install module using pip3.6:
+$ python -m pip install numpy
+
+Check module works:
 (from IDLE)
->> import numpy
+>>> import numpy
+>>> numpy.array([1,2,3])
+(prints 
 
 
 --------------------------------------------------
