@@ -16,9 +16,9 @@ Install python3.6.5 32-bit on windows by going to https://www.python.org/downloa
 
 Open python:
 (applications>IDLE)
-returns Python 3.6.5 (default, May 02 2018, 12:00:00) [MSC v.1500 64 bit (AMD64)] on win64
+prints Python 3.6.5 (default, May 02 2018, 12:00:00) [MSC v.1500 64 bit (AMD64)] on win64
 >>> 1+1
-returns 2
+prints 2
 
 Close python:
 >>>exit()
@@ -54,7 +54,21 @@ Check module works:
 (from IDLE)
 >>> import numpy
 >>> numpy.array([1,2,3])
-(prints 
+(should print an array: array([1,2,3]))
+
+View installed modules:
+$python -m pip list
+
+Unfortunately they're in the wrong place.
+
+View actual installed modules (right place):
+$cd (paste C:...\Python36)
+$cd lib
+$dir
+(shows all the modules as .py files)
+
+To actually install module:
+get the .py file and put in C:...\Python36\lib
 
 
 --------------------------------------------------
