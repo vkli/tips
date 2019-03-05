@@ -1,0 +1,88 @@
+Python
+
+Getting started:
+https://automatetheboringstuff.com/chapter0/
+
+Check whether your OS is 64-bit or 32-bit:
+Start>Control Panel>System
+check whether System Type says 64-bit or 32-bit
+
+Install python3.6.5 64-bit (pip automatically comes with 3.4+) using:
+https://www.python.org/downloads/release/python-365/ (x86-64 executable installer)
+
+or
+
+Install python3.6.5 32-bit on windows by going to https://www.python.org/downloads/, it will display "Download the latest version for Windows," then just click "Download Python 3.6.5."
+
+Test python/pip using:
+https://stackoverflow.com/questions/43304612/how-to-install-pip-o
+(open IDLE)
+returns Python 3.6.5 (default, May 02 2018, 12:00:00) [MSC v.1500 64 bit (AMD64)] on win64
+>> 1+1
+returns 2
+
+(open Commandline: cmd on windows)
+$ pip3.6 install numpy
+or
+$ python -m ensurepip --default-pip
+
+(from IDLE)
+>> import numpy
+
+
+--------------------------------------------------
+
+iPython/Jupyter Notebook
+
+Use pip to install/update Jupyter (previously called Ipython) + Notebook + Dependencies:
+(Commandline)
+(if anything is already installed, will tell you)
+$pip3.7 install jupyter[all]
+
+Run Jupyter Notebook:
+$jupyter notebook
+(Choose location for notebook)
+(Click New>Jupyter 3 Notebook)
+(from Notebook)
+>>>1+1
+SHIFT-ENTER (runs code)
+(result: 2)
+
+If error:
+Connecting to Kernel
+A connection to the notebook server could not be established. The notebook will continue trying to reconnect, but until it does, you will NOT be able to run code. Check your network connection or notebook server configuration
+Then:
+$pip3.7 install tornado==4.5.3
+
+Exit Jupyter Notebook:
+CTRL-C
+
+# = comment
+
+No undo, instead:
+CTRL-S (Creates Checkpoint)
+Revert to Checkpoint
+
+#but can only have 1 checkpoint at a time :(
+Instead, File > Make a copy
+
+
+
+Evaluate cell:
+
+[Shift-Enter] 
+
+#only outputs last output, for rest use print(ìtextî,calculations)
+
+#Heading cells must also be evaluated
+
+#to edit Heading cells, double-click
+
+
+
+[*] means busy
+must close plots in order for program to continue
+
+To abort:
+
+Kernel>Interrupt
