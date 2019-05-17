@@ -1,0 +1,93 @@
+$ means from commandline
+
+
+install dependencies:
+
+(assuming homebrew, npm already installed:)
+$brew install pkg-config node zeromq
+(pip automatically comes with Python2 automatically comes with macOS, but not as good as web install)
+(web install latest version of pip, requires and automatically comes with Python, say version 3.7:)
+Install Python3.7 from python.org/downloads
+Accepting defaults installs it to ~/../../Library/Frameworks/Python.framework/Versions/3.7 
+$python3.7
+$exit()
+$pip3.7
+$sudo pip3.7 install --upgrade pyzmq jupyter
+$pip3.7 show jupyter
+Installed to ~/../../Library/Frameworks/Python.framework/Versions/3.7/bin/
+
+
+install ijavascript:
+
+(install locally, since other way not working)
+$ npm config set prefix ~
+$ npm install -g ijavascript
+$ export PATH=$PATH:$HOME/bin
+$ export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin
+$ npm install -g ijavascript
+$ ijs --versions
+$ ijsinstall
+$ which ijs
+Installed to $HOME/bin/
+
+
+(restart commandline)
+
+
+run ijavascript:
+
+$ export PATH=$PATH:$HOME/bin
+$pip3.7 show jupyter
+(copy/paste path, preceded by export PATH=$PATH:, with lib... changed to bin:)
+$ export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin
+$ ijsnotebook
+choose working directory
+New > Javascript (Node.js)
+
+
+start coding!
+
+No undo, instead:
+Save and Checkpoint
+Revert to Checkpoint
+but can only have 1 checkpoint at a time :/
+No CTRL-C, instead:
+Kernel>Interrupt
+Run code by SHIFT-ENTER or Cell > Run:
+only outputs last output, for rest use console.log(...)
+even markdown cells must be evaluated
+to edit markdown cells, double-click on them
+[*] means busy
+For ijavascript, choose Kernel > Restart & Clear Output between code reruns
+
+
+exit ijavascript:
+
+$ [CTRL-C]
+exit? y [Enter]
+close browser
+
+
+Uninstall pip (for, say, pip3.7):
+$ pip3.7 uninstall pip
+$ pip3.7
+
+Reinstall pip (for, say, pip3.7):
+$ python3.7 -m ensurepip --default-pip
+
+Uninstall jupyter notebook:
+$pip3.7 uninstall jupyter notebook
+
+Install python modules:
+(anything you install in python will be usable in jupyter notebook)
+(if already installed, will tell you)
+$pip3.7 install numpy scipy matplotlib openpyxl
+
+Update versions: 
+install new python version by repeating above steps
+uninstall old python version if you wish
+$pip3.7 install -U pip
+$pip3.7 install -U notebook
+$pip3.7 install pipdate
+$pipdate3
+(updates all python modules, including jupyter)
