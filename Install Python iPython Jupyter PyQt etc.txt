@@ -15,10 +15,8 @@ Pip (Python package manager) help/Check if pip installed (automatically installe
 $pip3.6
 
 If not installed, install pip (for version, say, 3.5):
-Copy/paste get-pip.py from http://pip.readthedocs.org/en/latest/installing.html into get-pip.py text file in Downloads folder
-(Terminal)
-$ cd ~/Downloads #navigate to Downloads folder
-$python3.5 get-pip.py
+Download get-pip.py from http://pip.readthedocs.org/en/latest/installing.html into current directory
+$sudo python3.5 get-pip.py
 
 Uninstall pip (for, say, pip3.6):
 $ pip3.6 uninstall pip
