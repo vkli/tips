@@ -3,43 +3,64 @@ $is command line (i.e. from terminal, python, python shell, etc.)
 
 
 Install Python from python.org/downloads
-Accepting defaults installs it to ~/../../Library/Frameworks/Python.framework/Versions/3.6 (for version 3.6)
+Accepting defaults installs it to /Library/Frameworks/Python.framework/Versions/3.7 (for version 3.7)
+
+http://www.python.org/download/mac/tcltk/
+Python 3.6- (both IDLE and ipynb) crash when you run tkinter gui and press option-U
+Python 3.7+ come with their own private version of Tcl/Tk 8.6 and no longer use system-supplied or third-party supplied versions of Tcl/Tk
+
+Python 3.7 (Python.org) and 2.7.x (comes with Mac in /System/Library/Frameworks, you should normally not modify or delete files in /System/Library) can both be installed on your system and will not conflict. 
+
+"One more thing: to verify the identity of secure network connections, this Python needs a set of SSL root certificates.  You can download and install a current curated set from the Certifi project by double-clicking on the Install Certificates icon in the Finder window.  See the ReadMe file for more information."
 
 Run Python:
 (Terminal)
-$python3.6
+$python3.7
+or
+$idle3.7
+$1+1
 $exit()
 
-Pip (Python package manager) help/Check if pip installed (automatically installed with Python3.4+):
+Upgrade Pip (Python package manager, automatically installed with Python3.4+):
 (Terminal)
-$pip3.6
+$pip3.7 install --upgrade pip
 
 If not installed, install pip (for version, say, 3.5):
 Download get-pip.py from http://pip.readthedocs.org/en/latest/installing.html into current directory
 $sudo python3.5 get-pip.py
 
-Uninstall pip (for, say, pip3.6):
-$ pip3.6 uninstall pip
-$ pip3.6
+Uninstall pip (for, say, pip3.7):
+$ pip3.7 uninstall pip
+$ pip3.7
 
-Reinstall pip (for, say, pip3.6):
-$ python3.6 -m ensurepip --default-pip
+Reinstall pip (for, say, pip3.7):
+$ python3.7 -m ensurepip --default-pip
 
 Use pip to install/update Jupyter (previously called Ipython) + Notebook + Dependencies:
 (Terminal)
 (if anything is already installed, will tell you)
-$pip3.5 install ipython[all]
-$pip3.6 install jupyter[all]
+$pip3.7 install jupyter[all]
 
-Find Jupyter Notebook path:
+Find Jupyter Notebook path if needed:
+Applications>Python3.7>Update Shell Profile.command 
+or
 $pip3.6 show jupyter
 
 Run Jupyter Notebook (runs in browser, even with no internet connection!):
 (Terminal)
+$jupyter notebook
+or
 $/Library/Frameworks/Python.framework/Versions/3.6/bin/jupyter notebook
 (if you get error message:
 execution error: "http://localhost:8888/tree…” doesn’t understand the “open location” message
 then copy/paste http://localhost:8888/tree… into browser)
+
+Check versions:
+Help > About (includes Python version)
+$jupyter --version
+$jupyter notebook --version
+$pip3.7 --version
+$pip3.7 list (includes pip version)
 
 Exit Jupyter Notebook:
 (Close browser or Logout)
@@ -49,7 +70,7 @@ exit? y [Enter]
 
 ( Can uninstall a version of Jupyter Notebook:
 (Terminal)
-(uninstalls jupyter/notebook from python3.6, keeps jupyter/notebook from python3.5)
+(uninstalls jupyter/notebook from python3.6, keeps jupyter/notebook from python3.7)
 $pip3.6 uninstall jupyter notebook
 Uninstalling jupyter…Proceed? y
 Uninstalling notebook…Proceed? y )
@@ -58,13 +79,11 @@ Install modules:
 (Terminal)
 (anything you install in python will be usable in python notebook)
 (if already installed, will tell you)
-$pip3.6 install numpy scipy matplotlib openpyxl
-$pip3.6 install statsmodels (dependencies will be automatically installed: $pip3.6 install pandas patsy cython)
-$pip3.6 install scikit-learn
+$pip3.7 install numpy scipy matplotlib openpyxl statsmodels (dependencies will be automatically installed: $pip3.7 install pandas patsy cython) scikit-learn  
 
 Check TkInter is installed:
 (Terminal)
-$python3.6
+$python3.7
 $import tkinter
 $tkinter._test()
 $exit()
@@ -83,22 +102,14 @@ Open Applications/MacPorts/Python2.7/IDLE
 $import PyQt4 #must type this exactly, if no error then you successfully installed PyQt
 $exit()
 
-Check versions:
-$jupyter notebook
-(Browser)
-New > Notebook: Python3 > Help > About
-or
-$jupyter --version
-$jupyter notebook --version
-$pip3.6 --version
-$pip3.6 list
-(includes pip version)
-
 Update versions: 
 install new python version by repeating above steps
-uninstall old python version if you wish
-$pip3.6 install -U pip
-$pip3.6 install -U notebook
-$pip3.6 install pipdate
+$pip3.7 install -U pip
+$pip3.7 install -U notebook
+$pip3.7 install pipdate
 $pipdate3
 (updates all modules)
+
+Uninstall old python versions if you'd like
+By the way,
+>>> import this
