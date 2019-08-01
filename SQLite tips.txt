@@ -148,6 +148,14 @@ name  id
 flipper  dolphin      
 victoria  human
 
+#import .txt into table:
+(make sure .txt file is csv style)
+$ .mode csv
+$ .separator ","
+$ .import text.txt text
+$ .explain
+$ select * from text;
+
 # Backup database:
 
 (from Terminal)
@@ -186,3 +194,7 @@ victoria|human
 # save and exit:
 $ .save test0.db #must use new filename, otherwise will say filename locked
 $ .exit
+
+Using Pysqlite:
+Pysqlite is already built into Python as sqlite3 module:
+$ import sqlite3
