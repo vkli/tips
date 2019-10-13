@@ -16,10 +16,12 @@ Python 3.7 (Python.org) and 2.7.x (comes with Mac in /System/Library/Frameworks,
 Run Python:
 (Terminal)
 $python3.7
+>>>1+1
+>>>exit()
 or
 $idle3.7
-$1+1
-$exit()
+>>>1+1
+>>>exit()
 
 Upgrade Pip (Python package manager, automatically installed with Python3.4+):
 (Terminal)
@@ -119,6 +121,6 @@ $cd /usr/local/bin
 $sudo rm -rf *3.7*
 Applications > Python3.7 > Move To Trash
 
-
 By the way, check out this cool thing:
+$python3.7
 >>> import this
