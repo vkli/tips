@@ -110,6 +110,15 @@ $pip3.7 install pipdate
 $pipdate3
 (updates all modules)
 
-Uninstall old python versions if you'd like
-By the way,
+Uninstall old python versions if you'd like (for example Python3.7):
+(from admin account)
+$cd /Library/Frameworks/Python.framework/Versions
+$sudo rm -rf 3.7
+(type admin password)
+$cd /usr/local/bin
+$sudo rm -rf *3.7*
+Applications > Python3.7 > Move To Trash
+
+
+By the way, check out this cool thing:
 >>> import this
