@@ -1,6 +1,7 @@
 #is comment
 $is command line (i.e. from terminal, python, python shell, etc.)
 
+Video Tutorial and Demo: https://youtu.be/0CErj2nTwrI
 
 Install Python from python.org/downloads
 Accepting defaults installs it to /Library/Frameworks/Python.framework/Versions/3.7 (for version 3.7)
