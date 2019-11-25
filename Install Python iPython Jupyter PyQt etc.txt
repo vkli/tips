@@ -12,6 +12,8 @@ Python 3.7+ come with their own private version of Tcl/Tk 8.6 and no longer use 
 Python 3.7 (Python.org) and 2.7.x (comes with Mac in /System/Library/Frameworks, you should normally not modify or delete files in /System/Library) can both be installed on your system and will not conflict. 
 
 "One more thing: to verify the identity of secure network connections, this Python needs a set of SSL root certificates.  You can download and install a current curated set from the Certifi project by double-clicking on the Install Certificates icon in the Finder window.  See the ReadMe file for more information."
+ReadMe says: "The bundled pip included with this installer has its own default certificate store for verifying download connections."
+At any rate, I haven't installed any certificates and it works just fine.
 
 Run Python:
 (Terminal)
