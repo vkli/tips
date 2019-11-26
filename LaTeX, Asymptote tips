@@ -1,0 +1,47 @@
+Easiest way to use LaTeX (math typesetting): 
+
+download LyX
+
+type code: LyX > New Document > Insert > TeX code
+(example:
+\begin{equation}
+\label{bla}
+1+1=2
+\end{equation}
+In equation \ref{bla} we revisit arithmetic.)
+
+add preamble: Document > Settings > LaTeX Preamble
+(example:
+try viewing document with and without \usepackage{hyperref} in the preamble)
+
+view: Update, View
+
+other: click-and-go, just like word processor
+
+
+
+Use Asymptote (math drawing):
+
+download from https://asymptote.sourceforge.io/
+useful reference: https://asymptote.sourceforge.io/doc/Index.html
+
+interactive mode:
+$asy
+example: $draw((0,0)--(100,100));
+$exit
+
+actual use:
+open any text editor
+type code
+(example:
+settings.outformat="png";
+or 
+settings.outformat="pdf";
+or 
+none of the above
+label("Hello world!");)
+save as test.asy
+$asy test.asy
+open test.png or test.pdf or test.eps
+
+lots of examples in asymptote directory > examples

@@ -1,0 +1,30 @@
+$ is from terminal
+
+
+
+Install src.tgz or tar.gz:
+
+(navigate to directory containing package.src.tgz or package.tar.gz)
+$gunzip package.src.tgz
+or
+$gunzip package.tar.gz
+$tar -xf package.src.tar
+or
+$tar -xf package.tar
+$cd package
+(read the readme:)
+$cat README
+(q to quit reading)
+$./configure
+$make
+$make install
+
+
+
+Uninstall src.tgz or tar.gz:
+
+(navigate to directory called package)
+$make uninstall
+
+
+
