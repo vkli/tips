@@ -28,7 +28,7 @@ $idle3.7
 
 Upgrade Pip (Python package manager, automatically installed with Python3.4+):
 (Terminal)
-$pip3.7 install --upgrade pip
+$pip3.7 install --upgrade pip --user
 
 If not installed, install pip (for version, say, 3.5):
 Download get-pip.py from http://pip.readthedocs.org/en/latest/installing.html into current directory
