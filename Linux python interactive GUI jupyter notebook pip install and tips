@@ -1,0 +1,126 @@
+$ is from terminal
+>>> is from Python
+[] is from Jupyter
+
+
+
+(Python2 is usually already installed)
+To get and use Python3:
+
+Linux package manager > install for Python3 (if not already installed):
+python3
+pip
+jupyter qtconsole
+jupyter notebook
+
+Optional:
+jupyter doc
+jupyter core
+
+In other words, whatever will create the files (view in Linux package manager > Package > Files):
+/usr/bin/python3
+/usr/bin/pip3
+/usr/bin/jupyter-qtconsole
+/usr/bin/jupyter-notebook
+
+Optional:
+path to jupyter-doc
+/usr/bin/jupyter
+
+
+
+Run python3 (interactive mode):
+
+$python3
+>>> 1+1
+ENTER
+(returns 2)
+>>> os.getcwd()
+ENTER
+(returns current working directory)
+$exit()
+
+
+
+Run python3 (GUI):
+
+$jupyter-qtconsole
+OR 
+$jupyter qtconsole 
+(if jupyter core installed)
+
+Can do multiline editing (Help > Show QtConsole help, q):
+[]a=1
+CTRL-ENTER
+[]b=2
+CTRL-ENTER
+[]print(a+b)
+ENTER
+(returns 3)
+
+Can copy-paste and run multiline:
+copy-paste above code
+ENTER
+
+Can save as .html file and view:
+File > Save to HTML > Save as qtconsole.html
+Double-click qtconsole.html
+
+[]exit
+
+
+
+Run python3 (jupyter notebook):
+(this runs jupyter for the highest version of python installed on your computer)
+
+$cd [working directory you want to use]
+$jupyter-notebook
+OR
+$jupyter notebook
+(if jupyter core installed)
+
+File > New > Python3
+Help > About (tells you python, notebook version)
+[]1+1
+SHIFT-ENTER
+(returns 2)
+Save as name.ipynb
+Can only undo to latest checkpoint! To create multiple checkpoints, just create multiple copies: 
+File > Make A Copy
+Close window
+$CTRL-C
+$y
+
+
+
+Install modules (will be usable from both Python3 and Jupyter Notebook):
+
+Linux package manager > install python3-[module name]
+OR
+$pip3 install [module name]
+
+Recommended modules:
+matbplotlib
+numpy
+scipy
+pandas
+tkinter
+pycrypto
+
+
+
+View Jupyter docs:
+
+$cd [path to jupyter-doc]
+$cat index.rst
+OR
+https://jupyter-notebook.readthedocs.io/en/latest/
+https://jupyter-client.readthedocs.io/en/5.2.3/ 
+etc.
+
+
+
+Great tutorial:
+
+https://ipython-books.github.io/
+
