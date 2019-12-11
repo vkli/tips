@@ -10,22 +10,25 @@ To get and use Python3:
 Linux package manager > install for Python3 (if not already installed):
 python3
 pip
-jupyter qtconsole
+idle3 (might be under tkinter3, which was used to program it)
 jupyter notebook
 
 Optional:
-jupyter doc
+jupyter qtconsole
 jupyter core
+jupyter doc
+
 
 In other words, whatever will create the files (view in Linux package manager > Package > Files):
 /usr/bin/python3
 /usr/bin/pip3
-/usr/bin/jupyter-qtconsole
+/usr/bin/idle3
 /usr/bin/jupyter-notebook
 
 Optional:
-path to jupyter-doc
+/usr/bin/jupyter-qtconsole
 /usr/bin/jupyter
+path to jupyter-doc
 
 
 
@@ -35,6 +38,7 @@ $python3
 >>> 1+1
 ENTER
 (returns 2)
+>>> import os
 >>> os.getcwd()
 ENTER
 (returns current working directory)
@@ -42,7 +46,23 @@ $exit()
 
 
 
-Run python3 (GUI):
+Run python3 idle (GUI):
+
+$idle3
+>>>import os
+>>>os.getcwd()
+
+Can edit .py file:
+File > New File
+>>>print(1+1)
+Run > Run Module
+(returns 2)
+
+>>>exit()
+
+
+
+Run jupyter qtconsole (GUI):
 
 $jupyter-qtconsole
 OR 
@@ -70,9 +90,9 @@ Double-click qtconsole.html
 
 
 
-Run python3 (jupyter notebook):
-(this runs jupyter for the highest version of python installed on your computer)
+Run jupyter notebook (python3, ijavascript, etc. notebook):
 
+This runs jupyter for the highest version of python installed on your computer:
 $cd [working directory you want to use]
 $jupyter-notebook
 OR
