@@ -123,6 +123,7 @@ matbplotlib
 numpy
 scipy
 pandas
+opencv
 tkinter
 pycrypto
 
