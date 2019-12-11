@@ -18,7 +18,6 @@ jupyter qtconsole
 jupyter core
 jupyter doc
 
-
 In other words, whatever will create the files (view in Linux package manager > Package > Files):
 /usr/bin/python3
 /usr/bin/pip3
