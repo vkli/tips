@@ -1,20 +1,24 @@
-#is comment
-$is command line (i.e. from terminal, python, python shell, etc.)
+# is comment
+$ means from terminal
+>> means from python shell
 
 Video Tutorial and Demo: https://youtu.be/0CErj2nTwrI
 
 Install Python from python.org/downloads
-Accepting defaults installs it to /Library/Frameworks/Python.framework/Versions/3.7 (for version 3.7)
+Can apply below steps to any versions of Python: https://www.python.org/downloads/mac-osx/
+Accepting defaults installs Python to /Library/Frameworks/Python.framework/Versions/3.7 (for version 3.7)
 
-http://www.python.org/download/mac/tcltk/
+Note:
+
+* http://www.python.org/download/mac/tcltk/
 Python 3.6- (both IDLE and ipynb) crash when you run tkinter gui and press option-U
 Python 3.7+ come with their own private version of Tcl/Tk 8.6 and no longer use system-supplied or third-party supplied versions of Tcl/Tk
 
-Python 3.7 (Python.org) and 2.7.x (comes with Mac in /System/Library/Frameworks, you should normally not modify or delete files in /System/Library) can both be installed on your system and will not conflict. 
+* Python 3.7 (Python.org) and 2.7.x (automatically comes with Mac in /System/Library/Frameworks, you should normally not modify or delete files in /System/Library) can both be installed on your system and will not conflict. 
 
-"One more thing: to verify the identity of secure network connections, this Python needs a set of SSL root certificates.  You can download and install a current curated set from the Certifi project by double-clicking on the Install Certificates icon in the Finder window.  See the ReadMe file for more information."
+* "One more thing: to verify the identity of secure network connections, this Python needs a set of SSL root certificates.  You can download and install a current curated set from the Certifi project by double-clicking on the Install Certificates icon in the Finder window.  See the ReadMe file for more information."
 ReadMe says: "The bundled pip included with this installer has its own default certificate store for verifying download connections."
-At any rate, I haven't installed any certificates and it works just fine.
+* At any rate, I haven't installed any certificates and it works just fine.
 
 Run Python:
 (Terminal)
@@ -80,17 +84,26 @@ $pip3.6 uninstall jupyter notebook
 Uninstalling jupyter…Proceed? y
 Uninstalling notebook…Proceed? y )
 
+Modules are just Python programs (.py files) located in the folder where Python is installed on your computer. You use them by:
+
 Install modules:
 (Terminal)
 (anything you install in python will be usable in python notebook)
 (if already installed, will tell you)
-$pip3.7 install numpy scipy matplotlib openpyxl statsmodels (dependencies will be automatically installed: $pip3.7 install pandas patsy cython) scikit-learn  
+$pip3.7 install numpy scipy matplotlib openpyxl tkinter statsmodels (dependencies will be automatically installed: $pip3.7 install pandas patsy cython) scikit-learn  
 
-Check TkInter is installed:
+Check module is installed and works (for example tkinter):
 (Terminal)
 $python3.7
-$import tkinter
-$tkinter._test()
+>>import tkinter
+>>tkinter._test()
+$exit()
+
+Use module, check works (for example numpy):
+(Terminal)
+$python3.7
+>>import numpy
+>>print(numpy.array([1,2]))
 $exit()
 
 Install PyQt on Python2.7 using MacPorts:
