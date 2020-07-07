@@ -1,5 +1,8 @@
 Python
 
+$ means from commandline
+>> means from Python commandline
+
 Getting started:
 https://automatetheboringstuff.com/chapter0/
 
@@ -49,10 +52,12 @@ $ python3.7 -m ensurepip --default-pip
 Upgrade pip3.7:
 $pip3.7 install --upgrade pip
 
+Modules are just Python programs (.py files) located in the folder where Python is installed on your computer. You use them by:
+
 Install module using pip3.7:
 $ pip3.7 install numpy
 
-Check module works:
+Use module, check that it works:
 (from IDLE)
 >>> import numpy
 >>> numpy.array([1,2,3])
@@ -60,6 +65,8 @@ Check module works:
 
 View installed modules:
 $pip3.7 list
+
+You can apply the same procedure to any other version of Python: https://www.python.org/downloads/windows/
 
 --------------------------------------------------
 
