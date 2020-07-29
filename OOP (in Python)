@@ -5,9 +5,9 @@
 
 #example code
 #replace value with a number such as 1
-#replace f(input, attribute) with a function such as input+self.attribute
-#replace f(input2, attribute) with a function such as input2+self.attribute
-class Name(object):
+#replace f(input, self.attribute) with a function such as input+self.attribute
+#replace f(input2, self.attribute) with a function such as input2+self.attribute
+class Name: #can also have classes as Inputs, like class Name(Inputs):
 	attribute=value
 	def __init__(self, input):
 		self.attribute2=f(input, self.attribute)
@@ -15,13 +15,20 @@ class Name(object):
 		self.attribute2=f(input2, self.attribute)
 
 #example result
-#replace input with a number such as 1
-#replace input2 with a number such as 2
+#replace input with a number such as 3
+#replace input2 with a number such as 5
 >>> x=Name(input)
->>>x.attribute
+>>> print(x.attribute)
 value
->>> x.attribute2
+>>> print(x.attribute2)
 f(input, value)
 >>> x.method(input2)
->>>x.attribute2
+>>> print(x.attribute2)
 f(input2,value)
+
+#example module
+#save the above code as name.py
+>>> from name import Name
+>>> x=Name(input)
+>>> print(x.attribute)
+value
