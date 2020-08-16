@@ -26,7 +26,7 @@ prints 2
 Close python:
 >>>exit()
 
-Open python3.7 from commandline (cmd in Windows):
+Open python3.7 from commandline (Start > cmd in Windows):
 Check path:
 (System Properties > Environment Variables > System Variables>Path)
 (copy C:...\Python37)
