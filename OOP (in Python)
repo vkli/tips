@@ -1,7 +1,11 @@
 >>> means command, followed by output
 # means comment
+''' ''' means multiline comment
 
-#Basically, an object x of class Name has attributes x.attribute and methods x.method. These attributes can be changed independently of each other. The changes apply to x independently of other objects.
+---------------------------------------------------------------------------------------------------------------------------------------
+
+'''Basically, an object x of class Name has attributes x.attribute and methods x.method(). 
+The attributes can be changed independently of each other. The changes apply to x independently of other objects of class Name.'''
 
 #example code
 #replace value with a number such as 1
@@ -32,3 +36,58 @@ f(input2,value)
 >>> x=Name(input)
 >>> print(x.attribute)
 value
+
+-------------------------------------------------------------------------------------------------------------
+
+'''You can also have subclasses of superclasses (inheritance), and master of self (nested classes).'''
+
+# example pseudocode
+#Subclass inherits attributes/methods from Superclass
+#a.master = Class
+#x = output of Superclass
+from tkinter import *
+# for some reason the previous line doesn't import messagebox in Python 3.6+
+from tkinter import messagebox
+class Subclass(Superclass,input=default):    
+    def __init__(self,master):
+        Superclass.__init__(self)
+        self.attribute = input    
+    def method(self,x):
+        return something
+class Class(Frame):
+    def __init__(self,master,inputs=defaults):
+        Frame.__init__(self,master)
+        self.grid()
+        a = Subclass(self, input)
+        print(a.attribute)
+        print(a.method())
+Tk().title('Title')
+b = Class(Tk(), inputs)
+Tk().mainloop()
+
+# example result
+from tkinter import *
+# for some reason the previous line doesn't import messagebox in Python 3.6+
+from tkinter import messagebox
+class Tile(Button): 
+    def __init__(self,master,x,y): #x,y = coordinates 
+        Button.__init__(self,bg='white',relief='raised',width=22,height=4,font=('Arial',12))
+        self['text']='click for method(self,x)\n = x\n = output of superclass\n = output of Button'
+        self.grid(row=y,column=x)
+        self.bind('<Button-1>',self.method)
+        self.master=master
+    def method(self,x): 
+    #x = output of Button (https://github.com/python/cpython/blob/3.8/Lib/tkinter/__init__.py line 1568)
+        messagebox.showinfo('Title',x,parent=self)       
+class Board(Frame):
+    def __init__(self,master,inputs=0):
+        Frame.__init__(self,master,bg='black')
+        self.grid()
+        a = Tile(self,0,1)
+        print('a.master = ', a.master,' (output of nested class/Board not superclass/Button)') #output of Board not Button
+        print('board master = ',master,' (output of nested class/Tk() not superclass/Frame)') #output of Tk() not Frame
+
+root=Tk() #every time you type Tk() opens a new window
+root.title('Title')
+b = Board(root,0)
+root.mainloop()
