@@ -86,7 +86,6 @@ class Board(Frame):
         a = Tile(self,0,1)
         print('a.master = ', a.master,' (output of nested class/Board not superclass/Button)') #output of Board not Button
         print('board master = ',master,' (output of nested class/Tk() not superclass/Frame)') #output of Tk() not Frame
-
 root=Tk() #every time you type Tk() opens a new window
 root.title('Title')
 b = Board(root,0)
